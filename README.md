@@ -11,6 +11,7 @@ I am running these models/servers on Marathon. Here are the steps I'm using:
 
 ### For the HTTP Server
 You will need to bundle up the Sinatra gem (and related gems) into a JAR file to provide to the standalone JRuby. To do this, follow these steps first:
+
 1. Create a new gems directory (`mkdir gems`)
 2. Execute the JRuby Gem installer to install sinatra into the new gems directory (change the path to JRuby): `java -jar /mapr/cluster.raptor.beer/frameworks/jruby.jar -S gem install -i ./gems sinatra --no-rdoc --no-ri`
 3. Bundle that directory into a JAR: `jar cf gems.jar -C gems .`
